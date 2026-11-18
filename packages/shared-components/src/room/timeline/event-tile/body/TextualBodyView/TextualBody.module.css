@@ -39,6 +39,12 @@
 
 .annotated {
     display: flex;
+
+    /* Let the body shrink below its content width so that wide content
+       (e.g. a code block) scrolls instead of stretching the whole message. */
+    > :first-child {
+        min-width: 0;
+    }
 }
 
 .annotatedInline {
